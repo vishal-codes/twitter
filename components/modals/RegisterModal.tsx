@@ -26,7 +26,7 @@ const RegisterModal = () => {
         }
     }, [registerModal]);
 
-    const onToggleLoginModal = useCallback(() => {
+    const onToggle = useCallback(() => {
         if (isLoading) {
             return;
         }
@@ -67,7 +67,7 @@ const RegisterModal = () => {
         <div className='text-neutral-400 text-center mt-4'>
             <p>Already have an account ?</p>
             <span
-                onClick={onToggleLoginModal}
+                onClick={onToggle}
                 className='text-white cursor-pointer hover:underline'
             >
                 Sign In
