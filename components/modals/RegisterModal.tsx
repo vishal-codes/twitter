@@ -12,11 +12,11 @@ const RegisterModal = () => {
     const loginModal = useLoginModal();
     const registerModal = useRegisterModal();
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [name, setName] = useState('');
-    const [username, setUsername] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
+    const [name, setName] = useState<string>('');
+    const [username, setUsername] = useState<string>('');
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const onSubmit = useCallback(async () => {
         try {
