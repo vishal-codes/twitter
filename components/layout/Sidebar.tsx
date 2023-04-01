@@ -9,7 +9,7 @@ import SidebarItem from './SidebarItem';
 import SidebarTweetButton from './SidebarTweetButton';
 
 const Sidebar = () => {
-    const { user: currentUser } = useCurrentUser();
+    const { data: currentUser } = useCurrentUser();
 
     const items = [
         {
