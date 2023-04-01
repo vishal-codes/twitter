@@ -30,7 +30,6 @@ const EditModal = () => {
     }, [currentUser]);
 
     const onSubmit = useCallback(async () => {
-        console.log(bio);
         try {
             setIsLoading(true);
             await axios.patch('/api/edit', {
