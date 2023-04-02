@@ -12,8 +12,8 @@ const CommentItem: React.FC<CommentItemProps> = ({ data = {} }) => {
     const router = useRouter();
 
     const goToUser = useCallback(
-        (ev: any) => {
-            ev.stopPropagation();
+        (event: any) => {
+            event.stopPropagation();
 
             router.push(`/users/${data.user.id}`);
         },
@@ -31,13 +31,13 @@ const CommentItem: React.FC<CommentItemProps> = ({ data = {} }) => {
     return (
         <div
             className='
-        border-b-[1px] 
-        border-neutral-800 
-        p-5 
-        cursor-pointer 
-        hover:bg-neutral-900 
-        transition
-      '
+                border-b-[1px] 
+                border-neutral-800 
+                p-5 
+                cursor-pointer 
+                hover:bg-neutral-900 
+                transition
+            '
         >
             <div className='flex flex-row items-start gap-3'>
                 <Avatar userId={data.user.id} />
@@ -46,23 +46,23 @@ const CommentItem: React.FC<CommentItemProps> = ({ data = {} }) => {
                         <p
                             onClick={goToUser}
                             className='
-                text-white 
-                font-semibold 
-                cursor-pointer 
-                hover:underline
-            '
+                                text-white 
+                                font-semibold 
+                                cursor-pointer 
+                                hover:underline
+                            '
                         >
                             {data.user.name}
                         </p>
                         <span
                             onClick={goToUser}
                             className='
-                text-neutral-500
-                cursor-pointer
-                hover:underline
-                hidden
-                md:block
-            '
+                                text-neutral-500
+                                cursor-pointer
+                                hover:underline
+                                hidden
+                                md:block
+                            '
                         >
                             @{data.user.username}
                         </span>
